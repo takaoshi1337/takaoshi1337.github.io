@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>takaoshi</title>
+    <meta name="description" content="takaoshi's website">
+    <meta name="theme-color" content="#121212">
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+    <link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@400;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/css/style.css">
+
+    <script src="/js/main.js" defer></script>
+    <script src="/js/player.js" defer></script>
+    <script type="module" src="/js/lyrics.js"></script>
+    <script src="/js/buttons.js" defer></script>
+    <script src="/js/weather.js" defer></script>
+    <script src="/js/steam.js" defer></script>
+</head>
+<body>
+    <div class="container">
+        <div class="card bio">
+            <div class="bio-left">
+                <img src="/assets/images/avatar.jpg" alt="avatar">
+                <div class="bio-name">
+                    <h1>takaoshi</h1>
+                    <p>marat, 17 y.o. • russia</p>
+                </div>
+            </div>
+            <div class="bio-divider"></div>
+            <div class="bio-right">
+                <div>
+                    <div class="label">about</div>
+                    <p>an ordinary guy who enjoys programming as a hobby
+                        <br>always open for questions!</p>
+                </div>
+                <div>
+                    <div class="label">dsss</div>
+                    <p class="subtext">an ordinary guy who enjoys programming as a hobby
+                        <br>always open for questions!</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="card extra">
+            <div>
+                <div class="label">Socials</div>
+                <div class="extra-content">
+                    <a href="#" class="btn-aesthetic" id="scl-telegram">Telegram</a>
+                    <a href="#" class="btn-aesthetic" id="scl-github">GitHub</a>
+                    <a href="#" class="btn-aesthetic" id="scl-steam">Steam</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="card music">
+            <img src="/assets/images/track.png" alt="Track cover">
+            <div class="track-info">
+                <h2>крепче</h2>
+                <span>whyspurky</span>
+            </div>
+            <div id="lyrics-container">
+                <p id="current-lyric">...</p>
+            </div>
+            <div class="progress-container">
+                <div class="time-info">
+                    <span id="currentTime">0:00</span>
+                    <span id="durationTime">0:00</span>
+                </div>
+                <input type="range" id="progress" min="0" max="100" value="0">
+            </div>
+            <div class="controls">
+                <button id="toggleBtn">PLAY</button>
+                <div class="volume-container">
+                    <input type="range" id="volume" min="0" max="1" step="0.01" value="0.05">
+                    <span id="volValue">5%</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="card extra">
+            <div>
+                <div class="label">Projects</div>
+                <div class="extra-content">
+                    <a href="javascript:void(0)" class="btn-aesthetic" id="prj-unknown">???</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="card weather-standalone">
+            <div class="label">Weather · Kazan</div>
+            <div class="weather-main">
+                <span class="weather-icon" id="weather-icon">...</span>
+                <span class="weather-temp" id="weather-temp">--°C</span>
+            </div>
+            <div class="weather-desc" id="weather-desc">loading</div>
+        </div>
+
+        <div class="card extra">
+            <div>
+                <div class="label">Tech Stack</div>
+                <div class="extra-content tech-stack">
+                    <span class="tech-badge">Python</span>
+                    <span class="tech-badge">Java (kinda)</span>
+                    <span class="tech-badge">Web (HTML/CSS/JS)</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="card extra" id="steam-card">
+        <div>
+            <div class="label">Steam · Last Played</div>
+            <div class="steam-content">
+                <img id="steam-icon" src="" alt="game icon">
+                <div class="steam-info">
+                    <span id="steam-game">загрузка...</span>
+                    <span id="steam-time"></span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <audio id="track" src="/assets/sounds/track.mp3"></audio>
+</body>
+</html>
